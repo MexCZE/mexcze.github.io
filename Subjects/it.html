@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maturitka Formalitka | IT</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="menu">
+        <h1>Maturitka formalitka</h1>
+        <div class="subjects">
+            <a href="/Subjects/lit.html" class="subject">Literatura</a>
+            <a href="/Subjects/prg.html" class="subject">Programování</a>
+            <a href="/Subjects/it.html" class="subject">Informační Technologie</a>
+            <a href="/Subjects/aj.html" class="subject">Angličtina</a>        
+        </div>
+        <div class="content">
+            <p class="nadpis">Otázky</p>
+            <p class="format-text" onclick="showPDF()">PDF</p>
+            <div class="pdf" id="pdf" style="display: none;">
+            </div>
+            <p class="format-text" onclick="showDOCX()">DOCX</p>
+            <div class="docx" id="docx" style="display: none;">
+                <a href="/IT/ITE-maturitní-otázky.docx">IT - otázky</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showPDF() {
+            var x = document.getElementById('pdf');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+        function showDOCX() {
+            var x = document.getElementById('docx');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>
