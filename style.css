@@ -2,33 +2,31 @@
 
 * {
 
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .menu {
-    margin: auto;
-    width: 70%;
-    padding: 10%;
-    text-align: center;
+  padding-top: 15%;
+  text-align: center;
 }
 
 h1 {
-    font-size: 70px;
-    font-family: 'Nunito', sans-serif;
-    text-transform: uppercase;
+  font-size: 70px;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
 }
 
 .subject {
-    display: inline-block;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
-    text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .subjects {
-    padding-top: 5%;
+  padding-top: 5%;
 }
 
 .subjects a {
@@ -41,7 +39,7 @@ h1 {
   color: #212121;
   cursor: pointer;
   display: inline-block;
-  font-family: Circular,Helvetica,sans-serif;
+  font-family: Circular, Helvetica, sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: -.01em;
@@ -92,15 +90,15 @@ h1 {
 }
 
 .content {
-    display: block;
-    padding: 5%;
+  display: block;
+  padding: 5%;
 }
 
 .content a {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
 }
 
 .content a:hover {
@@ -108,28 +106,29 @@ h1 {
 }
 
 .nadpis {
-    font-family: 'Nunito', sans-serif;
-    font-size: 35px;
-    text-decoration: underline;
+  font-family: 'Nunito', sans-serif;
+  font-size: 35px;
+  text-decoration: underline;
 }
 
 .pdf {
-    padding-top: 2%;
-    font-family: 'Nunito', sans-serif;
+  padding-top: 2%;
+  font-family: 'Nunito', sans-serif;
 }
 
 .docx {
-    padding-top: 2%;
-    font-family: 'Nunito', sans-serif;
+  padding-top: 2%;
+  font-family: 'Nunito', sans-serif;
 }
 
 .format-text {
-    padding-top: 2%;
-    font-family: 'Nunito', sans-serif;
-    font-size: 25px;
-    cursor: pointer;
-    transition: color 0.2s ease-in-out;
+  padding-top: 2%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 25px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
 }
+
 .format-text:hover {
-    color: #787878;
+  color: #787878;
 }
