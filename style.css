@@ -5,6 +5,11 @@
   margin: 0;
 }
 
+::selection {
+  color: white;
+  background-color: black;
+}
+
 .menu {
   padding-top: 15%;
   text-align: center;
