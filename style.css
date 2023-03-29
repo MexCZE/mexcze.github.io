@@ -115,6 +115,21 @@ h1 {
   text-decoration: underline;
 }
 
+.other-content {
+  padding-top: 35px;
+}
+
+.other-content a {
+  font-family: 'Nunito', sans-serif;
+  font-size: 35px;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+  color: black;
+}
+.other-content a:hover {
+  color: #787878;
+}
+
 .pdf {
   padding-top: 2%;
   font-family: 'Nunito', sans-serif;
