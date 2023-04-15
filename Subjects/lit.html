@@ -23,7 +23,7 @@
         <div class="content">
             <p class="nadpis">Rozbory Knih</p>
             <p class="format-text" onclick="showPDF()">PDF</p>
-            <div class="pdf" id="pdf" style="display: none;">
+            <div class="pdf inverted" id="pdf" style="display: none;">
                 <a href="/LIT/1. W. Shakespeare - Romeo a Julie.pdf" target="_blank">1. W. Shakespeare - Romeo a Julie</a>
                 <a href="/LIT/2. W. Shakespeare - Hamlet.pdf" target="_blank">2. W. Shakespeare - Hamlet</a>
                 <a href="/LIT/3. Moliere - Lakomec.pdf" target="_blank">3. Moliere - Lakomec</a>
@@ -97,6 +97,18 @@
         }
         function notYet() {
             alert("Ještě není hotová");
+        }
+
+        document.onkeypress = function (e) {
+            e = e || window.event;
+
+            if (e.keyCode === 13) {
+                document.documentElement.classList.toggle('dark-mode');
+
+                document.querySelectorAll('.inverted').forEach((result) => {
+                    result.classList.toggle('invert');
+                })
+            }
         }
     </script>
 </body>
