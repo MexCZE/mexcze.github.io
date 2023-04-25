@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maturitka Formalitka | Literatura</title>
+    <link rel="stylesheet" href="/Maturita/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.0/css/all.css">
+    <link rel="icon" href="/Maturita/icon.png">
+</head>
+
+<body>
+    <div class="menu">
+        <h1>Maturitka formalitka</h1>
+        <div class="subjects">
+            <a href="/Maturita/index.html" class="subject" style="background-color: rgba(0, 0, 0, 0.1);">Literatura <i class="fas fa-book"></i></a>
+            <a href="/Maturita/Subjects/prg.html" class="subject">Programování <i class="fas fa-code"></i></a>
+            <a href="/Maturita/Subjects/it.html" class="subject">Informační Technologie <i class="fas fa-desktop"></i></a>
+            <a href="/Maturita/Subjects/aj.html" class="subject">Angličtina <i class="fas fa-language"></i></a>
+        </div>
+        <div class="content">
+            <p class="nadpis">Rozbory Knih</p>
+            <p class="format-text" onclick="showPDF()">PDF</p>
+            <div class="pdf inverted" id="pdf" style="display: none;">
+                <a href="/Maturita/LIT/1. W. Shakespeare - Romeo a Julie.pdf" target="_blank">1. W. Shakespeare - Romeo a Julie</a>
+                <a href="/Maturita/LIT/2. W. Shakespeare - Hamlet.pdf" target="_blank">2. W. Shakespeare - Hamlet</a>
+                <a href="/Maturita/LIT/3. Moliere - Lakomec.pdf" target="_blank">3. Moliere - Lakomec</a>
+                <a href="/Maturita/LIT/4. N. V. Gogol - Revizor.pdf" target="_blank">4. N. V. Gogol - Revizor</a>
+                <a href="/Maturita/LIT/5. E. A. Poe - Jáma a kyvadlo.pdf" target="_blank">5. E. A. Poe - Jáma a kyvadlo</a>
+                <a href="/Maturita/LIT/6. K. H. Mácha - Máj.pdf" target="_blank">6. K. H. Mácha - Máj</a>
+                <a href="/Maturita/LIT/7. K. J. Erben - Kytice z pověstí národních.pdf" target="_blank">7. K. J. Erben - Kytice z pověstí národních</a>
+                <a href="/Maturita/LIT/8. J. Vrchlický - Noc na Karlštejně.pdf" target="_blank">8. J. Vrchlický - Noc na Karlštejně</a>
+                <a href="/Maturita/LIT/9. E. M. Remarque - Na západní frontě klid.pdf" target="_blank">9. E. M. Remarque - Na západní frontě klid</a>
+                <a href="/Maturita/LIT/10. A. de Saint-Exupéry - Malý princ.pdf" target="_blank">10. A. de Saint-Exupéry - Malý princ</a>
+                <a href="/Maturita/LIT/11. R. Rolland - Petr a Lucie.pdf" target="_blank">11. R. Rolland - Petr a Lucie</a>
+                <a href="/Maturita/LIT/12. E. Hemingway - Stařec a moře.pdf" target="_blank">12. E. Hemingway - Stařec a moře</a>
+                <a href="/Maturita/LIT/13. G. Orwell - Farma zvířat.pdf" target="_blank">13. G. Orwell - Farma zvířat</a>
+                <a href="/Maturita/LIT/14. G. B. Shaw - Pygmalion.pdf" target="_blank">14. G. B. Shaw - Pygmalion</a>
+                <a href="/Maturita/LIT/15. T. Wiliams - Kočka na rozpálené plechové střeše.pdf" target="_blank">15. T. Wiliams - Kočka na rozpálené plechové střeše</a>
+                <a href="/Maturita/LIT/16. V. Vančura - Rozmarné léto.pdf" target="_blank">16. V. Vančura - Rozmarné léto</a>
+                <a href="/Maturita/LIT/17. K. Poláček - Bylo nás pět.pdf" target="_blank">17. K. Poláček - Bylo nás pět</a>
+                <a href="/Maturita/LIT/18. B. Hrabal - Ostře sledované vlaky.pdf" target="_blank">18. B. Hrabal - Ostře sledované vlaky</a>
+                <a href="/Maturita/LIT/19. K. Čapek - R.U.R.pdf" target="_blank">19. K. Čapek - R.U.R.</a>
+                <a href="/Maturita/LIT/20. K. Čapek - Bílá nemoc.pdf" target="_blank">20. K. Čapek - Bílá nemoc</a>
+                <br/>
+                <a href="/Maturita/LIT/LIT_Knihy_Complete_PDF.zip" style="color: red;" download>STÁHNOUT VŠE</a>
+            </div>
+            <p class="format-text" onclick="showDOCX()">DOCX</p>
+            <div class="docx" id="docx" style="display: none;">
+                <a href="/Maturita/LIT/1. W. Shakespeare - Romeo a Julie.docx">1. W. Shakespeare - Romeo a Julie</a>
+                <a href="/Maturita/LIT/2. W. Shakespeare - Hamlet.docx">2. W. Shakespeare - Hamlet</a>
+                <a href="/Maturita/LIT/3. Moliere - Lakomec.docx">3. Molière - Lakomec</a>
+                <a href="/Maturita/LIT/4. N. V. Gogol - Revizor.docx">4. N. V. Gogol - Revizor</a>
+                <a href="/Maturita/LIT/5. E. A. Poe - Jáma a kyvadlo.docx">5. E. A. Poe - Jáma a kyvadlo</a>
+                <a href="/Maturita/LIT/6. K. H. Mácha - Máj.docx">6. K. H. Mácha - Máj</a>
+                <a href="/Maturita/LIT/7. K. J. Erben - Kytice z pověstí národních.docx">7. K. J. Erben - Kytice z pověstí národních</a>
+                <a href="/Maturita/LIT/8. J. Vrchlický - Noc na Karlštejně.docx">8. J. Vrchlický - Noc na Karlštejně</a>
+                <a href="/Maturita/LIT/9. E. M. Remarque - Na západní frontě klid.docx">9. E. M. Remarque - Na západní frontě klid</a>
+                <a href="/Maturita/LIT/10. A. de Saint-Exupéry - Malý princ.docx">10. A. de Saint-Exupéry - Malý princ</a>
+                <a href="/Maturita/LIT/11. R. Rolland - Petr a Lucie.docx">11. R. Rolland - Petr a Lucie</a>
+                <a href="/Maturita/LIT/12. E. Hemingway - Stařec a moře.docx">12. E. Hemingway - Stařec a moře</a>
+                <a href="/Maturita/LIT/13. G. Orwell - Farma zvířat.docx">13. G. Orwell - Farma zvířat</a>
+                <a href="/Maturita/LIT/14. G. B. Shaw - Pygmalion.docx">14. G. B. Shaw - Pygmalion</a>
+                <a href="/Maturita/LIT/15. T. Wiliams - Kočka na rozpálené plechové střeše.docx">15. T. Wiliams - Kočka na rozpálené plechové střeše</a>
+                <a href="/Maturita/LIT/16. V. Vančura - Rozmarné léto.docx">16. V. Vančura - Rozmarné léto</a>
+                <a href="/Maturita/LIT/17. K. Poláček - Bylo nás pět.docx">17. K. Poláček - Bylo nás pět</a>
+                <a href="/Maturita/LIT/18. B. Hrabal - Ostře sledované vlaky.docx">18. B. Hrabal - Ostře sledované vlaky</a>
+                <a href="/Maturita/LIT/19. K. Čapek - R.U.R..docx">19. K. Čapek - R.U.R.</a>
+                <a href="/Maturita/LIT/20. K. Čapek - Bílá nemoc.docx">20. K. Čapek - Bílá nemoc</a>
+                <br/>
+                <a href="/Maturita/LIT/LIT_Knihy_Complete_DOCX.zip" style="color:red;" download>STÁHNOUT VŠE</a>
+            </div>
+            <div class="other-content">
+                <a href="/Maturita/LIT/Osnova_LIT.pdf" class="nadpis" target="_blank">Osnova</a> 
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showPDF() {
+            var x = document.getElementById('pdf');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+        function showDOCX() {
+            var x = document.getElementById('docx');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+        function notYet() {
+            alert("Ještě není hotová");
+        }
+
+        document.onkeypress = function (e) {
+            e = e || window.event;
+
+            if (e.keyCode === 13) {
+                document.documentElement.classList.toggle('dark-mode');
+
+                document.querySelectorAll('.inverted').forEach((result) => {
+                    result.classList.toggle('invert');
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>
