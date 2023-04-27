@@ -24,15 +24,57 @@
             <p class="nadpis">Otázky</p>
             <p class="format-text" onclick="showPDF()">PDF</p>
             <div class="pdf" id="pdf" style="display: none;">
-                <a href="/AJ/4. Pilsen.pdf" target="_blank">4. Pilsen</a>
-                <a href="/AJ/10. A trip to the Czech Republic.pdf" target="_blank">10. A trip to the Czech Republic</a>
-                <a href="/AJ/19. Prague.pdf" target="_blank">19. Prague</a>
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li><a href="/AJ/4. Pilsen.pdf" target="_blank">Pilsen</a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li><a href="/AJ/10. A trip to the Czech Republic.pdf" target="_blank">A trip to the Czech Republic</a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li><a href="/AJ/19. Prague.pdf" target="_blank">Prague</a></li>
+                    <li></li>     
+                </ol>    
+                <br>
+                <a class="download" href="#" onclick="notYet()">STÁHNOUT VŠE</a>       
             </div>
             <p class="format-text" onclick="showDOCX()">DOCX</p>
             <div class="docx" id="docx" style="display: none;">
-                <a href="/AJ/4. Pilsen.docx" target="_blank">4. Pilsen</a>
-                <a href="/AJ/10. A trip to the Czech Republic.docx">10. A trip to the Czech Republic</a>
-                <a href="/AJ/19. Prague.docx">19. Prague</a>
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li><a href="/AJ/4. Pilsen.docx">Pilsen</a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li><a href="/AJ/10. A trip to the Czech Republic.docx">A trip to the Czech Republic</a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li><a href="/AJ/19. Prague.docx">Prague</a></li>
+                    <li></li>     
+                </ol>    
+                <br>
+                <a class="download" href="#" onclick="notYet()">STÁHNOUT VŠE</a>  
             </div>
         </div>
     </div>
@@ -52,6 +94,9 @@
             } else {
                 x.style.display = 'none';
             }
+        }
+        function notYet() {
+            alert("Otázky ještě nejsou hotové");
         }
     </script>
 </body>

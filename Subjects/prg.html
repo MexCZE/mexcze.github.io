@@ -23,13 +23,58 @@
         <div class="content">
             <p class="nadpis">Otázky</p>
             <p class="format-text" onclick="showPDF()">PDF</p>
-            <div class="pdf" id="pdf" style="display: none;">
-                <a href="/PRG/6. Abstraktní datové typy.pdf" target="_blank">6. Abstraktní datové typy</a>
+            <div class="pdf inverted" id="pdf" style="display: none;">
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li><a href="/PRG/6. Abstraktní datové typy.pdf" target="_blank">Abstraktní datové typy</a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+                <br>
+                <a class="download" href="#" onclick="notYet()">STÁHNOUT VŠE</a>
             </div>
             <p class="format-text" onclick="showDOCX()">DOCX</p>
             <div class="docx" id="docx" style="display: none;">
-                <a href="/PRG/6. Abstraktní datové typy.docx">6. Abstraktní datové typy</a>
-                <a href="/PRG/20. Výjimky.docx" style="color:rgb(255, 145, 0);">16. Výjimky</a>
+                <ol>
+                    <li><a href="/PRG/1. Web a jeho realizace.docx" style="color: red;">Web a jeho realizace</a></li>
+                    <li><a href="/PRG/2. Web - HTML.docx">Web - HTML</a></li>
+                    <li><a href="/PRG/3. Web - CSS, formátování textu.docx" style="color: red;">Web - CSS, formátování textu</a></li>
+                    <li><a href="/PRG/4. Web - JavaScript, základní programové konstrukce.docx">Web - JavaScript, základní programové konstrukce</a></li>
+                    <li></li>
+                    <li><a href="/PRG/6. Abstraktní datové typy.docx">Abstraktní datové typy</a></li>
+                    <li><a href="/PRG/7. Algoritmy, programovací jazyky a paradigmata.docx" style="color: red;">Algoritmy, programovací jazyky a paradigmata</a></li>
+                    <li></li>
+                    <li><a href="/PRG/9. Datové struktury, primitivní a strukturované datové typy.docx" style="color: red;">Datové struktury, primitivní a strukturované datové typy</a></li>
+                    <li><a href="/PRG/10. Řazení.docx" style="color: red;">Řazení</a></li>
+                    <li><a href="/PRG/11. Principy objektově orientovaného programování.docx">Principy objektově orientovaného programování</a></li>
+                    <li><a href="/PRG/12. Objekty, atributy a metody.docx">Objekty, atributy a metody</a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li><a href="/PRG/19. Java - GUI, prvky, jejich vlastnosti a události.docx" style="color: red;">GUI, prvky, jejich vlastnosti a události</a></li>
+                    <li></li>
+                </ol>
+                <br>
+                <a class="download" href="#" onclick="notYet()">STÁHNOUT VŠE</a>
             </div>
             <div class="other-content">
                 <a href="/PRG/ActualTopSecret.pdf" class="nadpis" target="_blank">Osnova</a> 
@@ -53,6 +98,9 @@
             } else {
                 x.style.display = 'none';
             }
+        }
+        function notYet() {
+            alert("Otázky ještě nejsou hotové");
         }
     </script>
 </body>
