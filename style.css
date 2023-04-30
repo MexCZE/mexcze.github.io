@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
 }
- 
+
 ::selection {
   color: white;
   background-color: black;
@@ -112,11 +112,12 @@ h1 {
   display: flex;
   font-size: 20px;
 }
+
 .download {
   color: red;
   justify-content: center;
   padding-top: 35px;
-} 
+}
 
 .content a:hover {
   text-decoration: underline;
@@ -140,6 +141,7 @@ h1 {
   justify-content: center;
   color: black;
 }
+
 .other-content a:hover {
   color: #787878;
 }
@@ -165,18 +167,21 @@ h1 {
 .format-text:hover {
   color: #787878;
 }
+
 ol {
   display: inline-block;
   font-size: larger;
   margin-left: 170px;
   text-align: initial;
-} 
+}
+
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 50px;
   }
+
   ol {
     font-size: larger;
     margin-left: 50px;
-  } 
+  }
 }
