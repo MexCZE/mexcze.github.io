@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.0/css/all.css">
     <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/de270889e1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,12 +18,106 @@
         <hr>
         <h2>ANJ</h2>
         <div class="subjects">
-            <a href="/Subjects/anj.html" class="subject">ANJ</a>
+            <div class="kokot">
+                <p class="subject" onclick="toggleContent('aj_testy')">Testy</p>
+                <div id="aj_testy" style="display: none;">
+                    <p class="format-text" onclick="toggleContent('aj_test1')">Test 1</p>
+                    <div id="aj_test1" style="display: none;">
+                        <p class="format-text" onclick="toggleContent('aj_test1_a')">A</p>
+                        <div>
+                            <div id="aj_test1_a" style="display: none;">
+                                <a href="/AJ_Test/EF4e_int_filetest_1A.pdf">Test.pdf</a>
+                                <a href="/AJ_Test/EF4e_int_filetest_1A_AK.pdf">AnswerKey.pdf</a>
+                            </div>
+                        </div>
+                        <p class="format-text" onclick="toggleContent('aj_test1_b')">B</p>
+                        <div>
+                            <div id="aj_test1_b" style="display: none;">
+                                <a href="/AJ_Test/EF4e_int_filetest_1B.pdf">Test.pdf</a>
+                                <a href="/AJ_Test/EF4e_int_filetest_1B_AK.pdf">AnswerKey.pdf</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="format-text" onclick="toggleContent('aj_test2')">Test 2</p>
+                    <div id="aj_test2" style="display: none;">
+                        <p class="format-text" onclick="toggleContent('aj_test2_a')">A</p>
+                        <div>
+                            <div id="aj_test2_a" style="display: none;">
+                                <a href="/AJ_Test/EF4e_int_filetest_2A.pdf">Test.pdf</a>
+                                <a href="/AJ_Test/EF4e_int_filetest_2A_AK.pdf">AnswerKey.pdf</a>
+                            </div>
+                        </div>
+                        <p class="format-text" onclick="toggleContent('aj_test2_b')">B</p>
+                        <div>
+                            <div id="aj_test2_b" style="display: none;">
+                                <a href="/AJ_Test/EF4e_int_filetest_2B.pdf">Test.pdf</a>
+                                <a href="/AJ_Test/EF4e_int_filetest_2B_AK.pdf">AnswerKey.pdf</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="format-text" onclick="toggleContent('aj_test3')">Test 3</p>
+                    <div id="aj_test3" style="display: none;">
+                        <p class="format-text" onclick="toggleContent('aj_test3_a')">A</p>
+                        <div>
+                            <div id="aj_test3_a" style="display: none;">
+                                <a href="/AJ_Test/EF4e_int_filetest_3A.pdf">Test.pdf</a>
+                                <a href="/AJ_Test/EF4e_int_filetest_3A_AK.pdf">AnswerKey.pdf</a>
+                            </div>
+                        </div>
+                        <p class="format-text" onclick="toggleContent('aj_test3_b')">B</p>
+                        <div>
+                            <div id="aj_test3_b" style="display: none;">
+                                <a href="/AJ_Test/EF4e_int_filetest_3B_AK (1 of 3).png">AnswerKey (1 of 3).pdf</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="format-text" onclick="toggleContent('aj_test4')">Test 4</p>
+                    <div id="aj_test4" style="display: none;">
+                        <p class="format-text" onclick="toggleContent('aj_test4_a')">A</p>
+                        <div>
+                            <div id="aj_test4_a" style="display: none;">
+                                <a href="/AJ_Test/EF4e_int_filetest_4A.pdf">Test.pdf</a>
+                                <a href="/AJ_Test/EF4e_int_filetest_4A_AK.pdf">AnswerKey.pdf</a>
+                            </div>
+                        </div>
+                        <p class="format-text" onclick="toggleContent('aj_test4_b')">B</p>
+                        <div>
+                            <div id="aj_test4_b" style="display: none;">
+                                <a href="/AJ_Test/EF4e_int_filetest_4B.pdf">Test.pdf</a>
+                                <a href="/AJ_Test/EF4e_int_filetest_4B_AK.pdf">AnswerKey.pdf</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="nadpis" style="padding-top: 5%;">
+        <!-- <div class="nadpis" style="padding-top: 5%;">
             <a href="4E - rozpis ústních zkoušek, aktual. 9_5.pdf" style="color: black;" target="_blank">Rozpis ÚMZ</a>
-        </div>
+        </div> -->
     </div>
+    <script>
+        function toggleContent(contentId) {
+            var x = document.getElementById(contentId);
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+
+
+        document.onkeypress = function (e) {
+            e = e || window.event;
+
+            if (e.keyCode === 13) {
+                document.documentElement.classList.toggle('dark-mode');
+
+                document.querySelectorAll('.inverted').forEach((result) => {
+                    result.classList.toggle('invert');
+                })
+            }
+        }
+    </script>
 
 </body>
 

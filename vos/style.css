@@ -70,6 +70,8 @@ h2 {
   border-radius: 5px;
   display: block;
   width: 100px;
+  user-select: none;
+  cursor: pointer;
 }
 
 .subject:hover {
@@ -79,6 +81,7 @@ h2 {
 .content {
   display: block;
   padding: 5%;
+  text-align: center;
 }
 
 .content a {
@@ -116,10 +119,6 @@ h2 {
   color: black;
 }
 
-.other-content a:hover {
-  color: #787878;
-}
-
 .pdf {
   padding-top: 2%;
   font-family: 'Nunito', sans-serif;
@@ -131,15 +130,10 @@ h2 {
 }
 
 .format-text {
-  padding-top: 2%;
   font-family: 'Nunito', sans-serif;
-  font-size: 25px;
+  font-size: 30px;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
-}
-
-.format-text:hover {
-  color: #787878;
 }
 
 ol {
@@ -147,6 +141,14 @@ ol {
   font-size: larger;
   margin-left: 170px;
   text-align: initial;
+}
+
+ul {
+  list-style: none;
+}
+
+#aj_testy p {
+  margin-top: 5px;
 }
 
 @media only screen and (max-width: 600px) {
