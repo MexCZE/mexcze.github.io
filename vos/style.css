@@ -69,7 +69,7 @@ h2 {
   background-color: #43ba9a;
   border-radius: 5px;
   display: block;
-  width: 100px;
+  min-width: 100px;
   user-select: none;
   cursor: pointer;
 }
