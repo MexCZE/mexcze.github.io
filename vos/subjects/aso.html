@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOŠ | Angličtina</title>
+    <link rel="stylesheet" href="/vos/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.0/css/all.css">
+    <link rel="shortcut icon" href="/vos/icon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/de270889e1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="menu actual-subject">
+        <h1>VOŠ</h1>
+        <hr>
+        <h2>ANJ</h2>
+        <div class="subjects">
+            <div class="kokot">
+                <p class="subject" onclick="toggleContent('aj_testy')">Testy</p>
+                <div id="aj_testy" style="display: none;">
+                    <p class="format-text" onclick="toggleContent('aj_test1')">Test 1</p>
+                    <div id="aj_test1" style="display: none;">
+                        <p class="format-text" onclick="toggleContent('aj_test1_a')">A</p>
+                        <div>
+                            <div id="aj_test1_a" style="display: none;">
+                                <a href="/vos/AJ_Test/EF4e_int_filetest_1A.pdf">Test.pdf</a>
+                                <a href="/vos/AJ_Test/EF4e_int_filetest_1A_AK.pdf">AnswerKey.pdf</a>
+                            </div>
+                        </div>
+                        <p class="format-text" onclick="toggleContent('aj_test1_b')">B</p>
+                        <div>
+                            <div id="aj_test1_b" style="display: none;">
+                                <a href="/vos/AJ_Test/EF4e_int_filetest_1B.pdf">Test.pdf</a>
+                                <a href="/vos/AJ_Test/EF4e_int_filetest_1B_AK.pdf">AnswerKey.pdf</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="nadpis" style="padding-top: 5%;">
+            <a href="4E - rozpis ústních zkoušek, aktual. 9_5.pdf" style="color: black;" target="_blank">Rozpis ÚMZ</a>
+        </div> -->
+    </div>
+    <script>
+        function toggleContent(contentId) {
+            var x = document.getElementById(contentId);
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+
+
+        document.onkeypress = function (e) {
+            e = e || window.event;
+
+            if (e.keyCode === 13) {
+                document.documentElement.classList.toggle('dark-mode');
+
+                document.querySelectorAll('.inverted').forEach((result) => {
+                    result.classList.toggle('invert');
+                })
+            }
+        }
+    </script>
+
+</body>
+
+</html>
