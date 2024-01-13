@@ -42,10 +42,20 @@ h1 {
   color: #15cc9c;
 }
 
+h1 > a {
+  text-decoration: none;
+  color: #15cc9c;
+}
+
 h2 {
   font-size: 45px;
   font-family: 'Nunito', sans-serif;
   text-transform: uppercase;
+  color: #15cc9c;
+}
+
+h2 > a {
+  text-decoration: none;
   color: #15cc9c;
 }
 
@@ -54,6 +64,16 @@ h3 {
   font-family: 'Nunito', sans-serif;
   text-transform: uppercase;
   color: #15cc9c;
+}
+
+h3 > a {
+  text-decoration: none;
+  color: #15cc9c;
+}
+h1 > a:hover,
+h2 > a:hover,
+h3 > a:hover {
+  color: #32997f;
 }
 
 .subjects {
@@ -71,6 +91,10 @@ h3 {
   grid-template-columns: repeat(2, 100px);
 }
 
+.aj {
+  grid-template-columns: repeat(1, 100px);
+}
+
 .subject {
   text-decoration: none;
   padding: 10px;
@@ -84,6 +108,12 @@ h3 {
   user-select: none;
   cursor: pointer;
 }
+
+.disabled {
+  background-color: #43ba9a88;
+  pointer-events: none;
+}
+
 
 .subject:hover {
   background-color: #32997f;
