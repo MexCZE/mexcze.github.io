@@ -95,6 +95,10 @@ h3 > a:hover {
   grid-template-columns: repeat(2, 100px);
 }
 
+.mae {
+  grid-template-columns: repeat(1, 100px);
+}
+
 .subject {
   text-decoration: none;
   padding: 10px;
