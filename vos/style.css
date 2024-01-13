@@ -109,6 +109,11 @@ h3 > a:hover {
   grid-gap: 100px;
 }
 
+.mrs {
+  grid-template-columns: repeat(2, 100px);
+  grid-gap: 200px;
+}
+
 .subject {
   text-decoration: none;
   padding: 10px;
@@ -121,6 +126,10 @@ h3 > a:hover {
   min-width: 100px;
   user-select: none;
   cursor: pointer;
+}
+
+.mrs .subject {
+  min-width: 200px;
 }
 
 .disabled {
