@@ -49,6 +49,13 @@ h2 {
   color: #15cc9c;
 }
 
+h3 {
+  font-size: 30px;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  color: #15cc9c;
+}
+
 .subjects {
   display: grid;
   grid-template-columns: repeat(3, 100px);
@@ -58,6 +65,10 @@ h2 {
   font-family: 'Nunito', sans-serif;
   justify-items: center;
   justify-content: center;
+}
+
+.rocnik {
+  grid-template-columns: repeat(2, 100px);
 }
 
 .subject {
