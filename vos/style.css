@@ -92,7 +92,7 @@ h3 > a:hover {
 }
 
 .aj {
-  grid-template-columns: repeat(1, 100px);
+  grid-template-columns: repeat(2, 100px);
 }
 
 .subject {
