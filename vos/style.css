@@ -136,6 +136,9 @@ h3 > a:hover {
   grid-gap: 90px;
 }
 
+.aso {
+  grid-gap: 120px;
+}
 .subject {
   text-decoration: none;
   padding: 10px;
