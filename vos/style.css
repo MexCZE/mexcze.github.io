@@ -131,6 +131,11 @@ h3 > a:hover {
   grid-template-columns: repeat(3, 100px);
 }
 
+.szd {
+  grid-template-columns: (3, 100px);
+  grid-gap: 90px;
+}
+
 .subject {
   text-decoration: none;
   padding: 10px;
