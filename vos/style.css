@@ -24,7 +24,7 @@ body {
   text-align: center;
 }
 .actual-subject {
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 hr {
@@ -33,6 +33,11 @@ hr {
   background-color: #dde1e6;
   height: 2px;
   border: none;
+}
+
+.secondhr {
+  width: 21%;
+  margin-top: 20px;
 }
 
 .subjects hr {
@@ -114,6 +119,18 @@ h3 > a:hover {
   grid-gap: 200px;
 }
 
+.psh {
+  grid-template-columns: repeat(1, 100px);
+}
+
+.mar {
+  grid-template-columns: repeat(1, 100px);
+}
+
+.programy {
+  grid-template-columns: repeat(3, 100px);
+}
+
 .subject {
   text-decoration: none;
   padding: 10px;
@@ -137,6 +154,9 @@ h3 > a:hover {
   pointer-events: none;
 }
 
+.programy-text {
+  margin-top: 20px;
+}
 
 .subject:hover {
   background-color: #32997f;
@@ -202,6 +222,12 @@ h3 > a:hover {
 
 .pik .format-text {
   font-size: 20px;
+}
+
+.column {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 
 ol {
