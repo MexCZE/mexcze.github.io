@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOŠ | 1. ročník ZO | WAP</title>
+    <link rel="stylesheet" href="/vos/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.0/css/all.css">
+    <link rel="shortcut icon" href="/vos/icon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/de270889e1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="menu actual-subject">
+        <h1><a href="/vos/index.html">VOŠ</a></h1>
+        <hr>
+        <h2><a href="/vos/1rocnik/1rocnik.html">1. ročník</a></h2>
+        <h3><a href="/vos/1rocnik/1rocnik_zo.html">ZO</a></h3>
+        <h2>WAP</h2>
+        <div class="subjects wap">
+            <div class="kokot">
+                <p class="subject" onclick="toggleContent('wap_energie')">energie</p>
+                <div id="wap_energie">
+                    <p class="format-text" onclick="toggleContent('wap_image')">image</p>
+                    <div id="wap_image" style="display: none;">
+                        <a href="/vos/1rocnik/ZO/WAP/energie/image/logo.jpg">logo.jpg</a>
+                        <hr>
+                        <a href="/vos/1rocnik/ZO/WAP/energie/image/obrazek.jpg">obrazek.jpg</a>
+                    </div>
+                    <a href="/vos/1rocnik/ZO/WAP/energie/index.html">index.html</a>
+                    <hr>
+                    <a href="/vos/1rocnik/ZO/WAP/energie/style.css">style.css</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleContent(contentId) {
+            var x = document.getElementById(contentId);
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+
+
+        document.onkeypress = function (e) {
+            e = e || window.event;
+
+            if (e.keyCode === 13) {
+                document.documentElement.classList.toggle('dark-mode');
+
+                document.querySelectorAll('.inverted').forEach((result) => {
+                    result.classList.toggle('invert');
+                })
+            }
+        }
+    </script>
+
+</body>
+
+</html>

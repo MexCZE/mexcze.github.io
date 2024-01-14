@@ -1,0 +1,57 @@
+body {
+    font-family: Arial;
+    font-size: larger;
+    background-color: rgb(255, 246, 163);
+}
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: green;
+}
+
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 20px;
+}
+
+.obrazek {
+    float: left;
+    margin-right: 20px;
+}
+
+.vpravo {
+    float: right;
+}
+
+#format {
+    font-size: 1.5em;
+    background-color: aqua;
+    padding: 10px;
+}
+
+footer {
+    position: sticky;
+    top: 100%;
+    background-color: black;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.flex-item {
+    width: 300px;
+}
