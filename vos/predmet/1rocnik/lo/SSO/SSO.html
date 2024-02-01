@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VOŠ</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <title>VOŠ | 1. ročník LO SSO</title>
+    <link rel="stylesheet" href="/vos/style.css">
+    <link rel="shortcut icon" href="/vos/icon.png" type="image/x-icon">
 </head>
 <body>
     <div class="content-grid">
@@ -28,57 +28,34 @@
         </header>
         <nav aria-label="Breadcrumb" class="breadcrumbs">
           <ol>
-            <li><a aria-current="page" href="#">VOŠ</a></li>
+            <li><a href="/vos/index.html">VOŠ</a></li>
+            <li><a href="/vos/1rocnik.html">1. ročník</a></li>
+            <li><a href="/vos/1rocnik_ZO.html">LO</a></li>
+            <li><a href="#" aria-current="page">SSO</a></li>
           </ol>
         </nav>
         <main class="main-with-aside">
           <div class="flow">
       
-            <h1>VOŠ</h1>
+            <h1>Systémy pro správu obsahu</h1>
             <div class="filter">
               <h2 class="visually-hidden">Filter by type of conference</h2>
               <button class='filter-btn active' data-filter="all">All</button>
-              <button class='filter-btn' data-filter="rocnik">Ročníky</button>
-              <button class='filter-btn' data-filter="ucebni-plan">Učební plán</button>
+              <!-- <button class='filter-btn' data-filter="prezentace">Prezentace</button> -->
             </div>
       
             <ul class="conference-list">
-              <li class="conference" data-category='rocnik'>
-                <div class="conference-details">
-                  <span class="conference-date">1. září 2023 - 28. června 2024</span>
-                  <span class="conference-category">Ročník</span>
+              <li class="conference" data-category='prezentace'>
+                <!-- <div class="conference-details">
+                  <span class="conference-date">SSO</span>
+                  <span class="conference-category">Prezentace</span>
                 </div>
-                <a href="1rocnik.html" class="link">
-                  <h2 class="conference-name">1. ročník</h2>
-                </a>
-              </li>
-      
-              <li class="conference" data-category='rocnik'>
-                <div class="conference-details">
-                  <span class="conference-date">1. září 2024 - 28. června 2025</span>
-                  <span class="conference-category">Ročník</span>
-                </div>
-                  <h2 class="conference-name">2. ročník</h2>
-              </li>
-      
-              <li class="conference" data-category='rocnik'>
-                <div class="conference-details">
-                  <span class="conference-date">1. září 2025 - 28. června 2026</span>
-                  <span class="conference-category">Ročník</span>
-                </div>
-                  <h2 class="conference-name">3. ročník</h2>
+                <a href="/vos/predmet/1rocnik/zo/PSH/Periferie_osobních_počítačů_Hajžman.pptx" class="link" target="_blank">
+                  <h2 class="conference-name">Periferie_osobních_počítačů_Hajžman <i>[pptx]</i></h2>
+                </a> -->
               </li>
 
-              <li class="conference" data-category='ucebni-plan'>
-                <div class="conference-details">
-                  <span class="conference-category">Učební plán</span>
-                </div>
-                <a href="3rocnik.html" class="link">
-                  <a href="predmet/1rocnik/zo/IF_Ucebni-plan-2022.pdf" class="link" target="_blank">
-                    <h2 class="conference-name">Učební plán 2022</h2>
-                  </a>
-                </a>
-              </li>
+              
             </ul>
           </div>
           <aside class='sidebar flow'>
@@ -103,6 +80,6 @@
         </main>
       </div>
 
-      <script src="script.js"></script>
+      <script src="/vos/script.js"></script>
 </body>
 </html>
