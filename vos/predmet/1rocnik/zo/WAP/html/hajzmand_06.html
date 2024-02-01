@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cvičení 06</title>
+    <link rel="stylesheet" href="hajzmand.css">
+</head>
+
+<body>
+    <h1>Daniel Hajžman</h1>
+    <h2>Cvičení 06</h2>
+    <input type="button" onclick="goBack()" value="Back">
+    <hr>
+    <h3>JAVASCRIPT první kroky</h3>
+    <button onclick="alert('Nazdar')">Klikni sem</button>
+    <button onclick="alert('Ahoj')">Sem ne</button>
+    <hr>
+    <button onclick="alert('Rozměry obrázku: ' + mic.width + ' x ' + mic.height + ' pixelů')">Rozměr obrázku?</button>
+    <br>
+    <form>
+        <p>
+            Zadej šířku o kolik pixelů:
+            <input type="number" id="krok">
+            <input type="button" value="Zvětšit" onclick="mic.width = mic.width + Number(krok.value)">
+            <input type="button" value="Zmenšít" onclick="mic.width = mic.width - Number(krok.value)">
+        </p>
+    </form>
+    <img src="obrazky/mic.png" id="mic" alt="" width="300"> 
+
+    <script src="hajzmand.js"></script>
+</body>
+
+</html>

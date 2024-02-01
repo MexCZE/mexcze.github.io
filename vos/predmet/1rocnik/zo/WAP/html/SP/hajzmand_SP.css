@@ -1,0 +1,512 @@
+/* <================= Google Font Link (Nunito) =================> */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --yellow-default: rgb(250,254,11);
+    --bg-color-primary: #131416;
+    --bg-color-secondary: #0f0f0f;
+
+}
+
+/* <================= Scroll Bar =================> */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bfbfbf;
+    border-radius: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(218, 218, 218);
+}
+
+@font-face {
+    font-family: "Metallica-Font";
+    src: url("font/PASTOROF.TTF");
+}
+
+
+h1 {
+    font-size: 200px;
+    font-family: "Metallica-Font";
+    position: relative;
+}
+
+h2 {
+    font-size: 46px;
+    color: var(--font-large-color);
+    text-align: center;
+}
+
+h3 {
+    font-size: 34px;
+    margin-top: 50px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 17px;
+    color: var(--font-large-color);
+    text-align: justify;
+    margin: 10px 0;
+}
+
+li {
+    text-align: left;
+}
+
+.vpravo {
+    display: block;
+    float: right;
+    margin-left: 20px;
+}
+
+.vlevo {
+    display: block;
+    float: left;
+    margin-right: 20px;
+}
+
+.container {
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.animate-bar {
+    width: 5rem;
+    height: 4px;
+    background-color: var(--yellow-default);
+    margin-top: 15px;
+    position: relative;
+}
+
+.animate-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    border-left: 5px solid var(--bg-color-secondary);
+    border-right: 5px solid var(--bg-color-secondary);
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+.sub-heading {
+    max-width: 50rem;
+    text-align: center;
+    margin-top: 30px;
+    padding: 0 1rem;
+}
+
+#historie .sub-heading {
+    max-width: 40rem;
+}
+
+.clenove .sub-heading {
+    max-width: 80rem;
+}
+
+.mirrored {
+    display: inline-block;
+    transform: scaleX(-1);
+    text-shadow: -15px 20px 10px black;
+}
+
+/* <================= Navbar =================> */
+#navbar {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: yellow;
+    transition: all 0.3s ease-in-out;
+}
+
+#navbar.fixed {
+    position: fixed;
+}
+
+#navbar .logo {
+    width: 5rem;
+    margin-left: 5rem;
+    margin-top: 0.4rem;
+    z-index: 5;
+}
+
+#navbar .logo img {
+    width: 90%;
+}
+
+#navbar .nav-items {
+    display: flex;
+    list-style: none;
+    margin-right: 5rem;
+}
+
+#navbar .nav-items li {
+    margin: 0 1rem;
+}
+
+#navbar .nav-items li a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#navbar .nav-items li a::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+#navbar .nav-items li a:hover::after {
+    width: 100%;
+}
+
+#navbar .nav-items .dropdown {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#navbar .nav-items li {
+    list-style-type: none;
+}
+
+#navbar .nav-items .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(250,254,11);
+    min-width: 491px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2s);
+    padding: 12px 0;
+    z-index: 1;
+    margin-top: 5px;
+}
+
+#navbar .nav-items .dropdown-content a {
+    color: black;
+}
+
+#navbar .nav-items .disko-dropdown .dropdown-content {
+    min-width: 155px;
+}
+
+#navbar .nav-items .dropdown-content ul {
+    padding: 0;
+}
+
+#navbar .nav-items .dropdown-content li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+#navbar .nav-items .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* <================= home =================> */
+#home h1 {
+    color: var(--yellow-default);
+    text-shadow: 10px 10px 10px black;
+}
+
+#home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #131416;
+}
+
+#home .text-holder{
+    z-index: 2;
+    text-align: center;
+}
+
+#home .text-holder h1 {
+    font-weight: 300;
+    text-align: center;
+}
+
+/* <================= Úvod =================> */
+#uvod {
+    background-color: var(--bg-color-primary);
+}
+
+
+/* <================= Historie =================> */
+
+#historie {
+    background-color: var(--bg-color-secondary);
+}
+
+.btn{
+    font-family: 'Nunito';
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: var(--yellow-default);
+    border: 2px solid var(--yellow-default);
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    margin: 10px;
+    padding: 10px 24px;
+}
+  
+.btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 190px;
+    height: 62px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: var(--yellow-default);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.4, 1);
+}
+  
+.btn:hover::before {
+    scale: 3;
+}
+  
+.btn:hover {
+    color: black;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgb(0 0 0 / 25%);
+}
+  
+.btn:active {
+    scale: 1;
+}
+
+#historie a {
+    text-decoration: none;
+}
+
+/* <================= Členové skupiny =================> */
+
+.clenove {
+    display: flex;
+    gap: 50px;
+    margin:  20px 5px;
+    justify-content: center;
+}
+
+
+/* <================= Diskografie =================> */
+#diskografie {
+    background-color: var(--bg-color-primary);
+}
+
+#diskografie .btn::before {
+    width: 70px;
+}
+
+
+
+/* <================= Responsive =================> */
+
+/* Hamburger */
+#navbar .checkbox {
+    position: absolute;
+    width: 32px;
+    height: 26px;
+    right: 2.5rem;
+    opacity: 0;
+    display: none;
+}
+
+.hamburger-lines {
+    position: absolute;
+    width: 32px;
+    height: 26px;
+    right: 2.5rem;
+    pointer-events: none;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+    display: none;
+}
+
+.hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border: 10px;
+    background-color: #3b3b3b;
+}
+
+.hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+input[type="checkbox"]:checked~.hamburger-lines .line1 {
+    transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked~.hamburger-lines .line2 {
+    transform: scale(0);
+}
+
+input[type="checkbox"]:checked~.hamburger-lines .line3 {
+    transform: rotate(-45deg);
+}
+
+
+@media (max-width: 950px) {
+
+    #navbar .nav-items {
+        position: fixed;
+        flex-direction: column;
+        gap: 20px;
+        top: 0;
+        left: -100%;
+        background-color: #131416;
+        width: 300px;
+        height: 100%;
+        padding-top: 8rem;
+        padding-left: 2rem;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #navbar .nav-items .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 170px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2s);
+        padding: 12px 0;
+        z-index: 1;
+        margin-top: 1px;
+        right: 5px;
+        top: -14px;
+    }
+
+    #navbar .nav-items li a {
+        color: #bdbdbd;
+    }
+
+    #navbar .nav-items .dropdown-text {
+        color: #131416;
+    }
+
+    input[type="checkbox"]:checked~.nav-items {
+        left: 0% !important;
+    }
+
+    #navbar .checkbox {
+        display: block;
+    }
+
+    .hamburger-lines {
+        display: flex;
+    }
+
+    #navbar .logo {
+        margin-left: 1.5rem;
+    }
+}
+
+@media (max-width: 850px) {
+    #navbar .checkbox {
+        right: 2.5rem;
+    }
+
+    .container {
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    /* #uvod {
+        min-height: 30vh;
+        margin-top: 150px;
+    } */
+    #uvod h1 {
+        font-size: 50px;
+    }
+    #uvod .nadpis-logo {
+        width: 35%;
+    }
+}
