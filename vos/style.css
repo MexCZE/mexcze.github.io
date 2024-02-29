@@ -139,6 +139,10 @@ body {
   border-radius: 0.5rem;
 }
 
+.sidebar h3 {
+  text-transform: uppercase;
+}
+
 .breadcrumbs ol {
   list-style: none;
   padding: 0;
