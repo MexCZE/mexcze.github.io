@@ -224,8 +224,11 @@ body {
   box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.2);
 }
 
-
 .link {
   text-decoration: none;
   color: black;
+}
+
+.nastroje-item {
+  margin-bottom: 10px;
 }
