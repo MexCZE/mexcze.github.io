@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ZAV Cvičení Tracker</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Cvičení Tracker</h2>
+        <label for="currentExercises">Aktuální počet cvičení:</label>
+        <input type="number" id="currentExercises" placeholder="Zadejte číslo" min="0">
+        <label for="endDate">Datum konce (měsíc a den):</label>
+        <input type="date" id="endDate" min="<?php echo date('Y-m-d'); ?>" value="<?php echo date('Y-m-d'); ?>">
+        <button onclick="calculate()">Vypočítat</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
