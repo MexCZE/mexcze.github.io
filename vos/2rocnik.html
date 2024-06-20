@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VOŠ</title>
+    <title>VOŠ | 2. ročník</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/vos/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
 </head>
 <body>
     <div class="content-grid">
@@ -28,59 +28,40 @@
         </header>
         <nav aria-label="Breadcrumb" class="breadcrumbs">
           <ol>
-            <li><a aria-current="page" href="#">VOŠ</a></li>
+            <li><a href="index.html">VOŠ</a></li>
+            <li><a href="#">2. ročník</a></li>
           </ol>
         </nav>
         <main class="main-with-aside">
           <div class="flow">
       
-            <h1>VOŠ</h1>
+            <h1>1. ročník</h1>
             <div class="filter">
               <h2 class="visually-hidden">Filter by type of conference</h2>
               <button class='filter-btn active' data-filter="all">All</button>
-              <button class='filter-btn' data-filter="rocnik">Ročníky</button>
-              <button class='filter-btn' data-filter="ucebni-plan">Učební plán</button>
+              <button class='filter-btn' data-filter="semestr">Semestry</button>
             </div>
       
             <ul class="conference-list">
-              <li class="conference" data-category='rocnik'>
+              <li class="conference" data-category='semestr'>
                 <div class="conference-details">
-                  <span class="conference-date">1. září 2023 - 28. června 2024</span>
-                  <span class="conference-category">Ročník</span>
+                  <span class="conference-date">1. září - 2. února</span>
+                  <span class="conference-category">Semestr</span>
                 </div>
-                <a href="1rocnik.html" class="link">
-                  <h2 class="conference-name">1. ročník</h2>
+                <a href="2rocnik_ZO.html" class="link">
+                  <h2 class="conference-name">Zimní období</h2>
                 </a>
               </li>
       
-              <li class="conference" data-category='rocnik'>
+              <li class="conference" data-category='semestr'>
                 <div class="conference-details">
-                  <span class="conference-date">1. září 2024 - 28. června 2025</span>
-                  <span class="conference-category">Ročník</span>
+                  <span class="conference-date">5. února - 28. června</span>
+                  <span class="conference-category">Semestr</span>
                 </div>
-                <a href="2rocnik.html" class="link">
-                  <h2 class="conference-name">2. ročník</h2>
+                <a href="2rocnik_LO.html" class="link">
+                  <h2 class="conference-name">Letní období</h2>
                 </a>
-              </li>
-      
-              <li class="conference" data-category='rocnik'>
-                <div class="conference-details">
-                  <span class="conference-date">1. září 2025 - 28. června 2026</span>
-                  <span class="conference-category">Ročník</span>
-                </div>
-                  <h2 class="conference-name">3. ročník</h2>
-              </li>
-
-              <li class="conference" data-category='ucebni-plan'>
-                <div class="conference-details">
-                  <span class="conference-category">Učební plán</span>
-                </div>
-                <a href="3rocnik.html" class="link">
-                  <a href="predmet/1rocnik/zo/IF_Ucebni-plan-2022.pdf" class="link" target="_blank">
-                    <h2 class="conference-name">Učební plán 2022</h2>
-                  </a>
-                </a>
-              </li>
+              </li>             
             </ul>
           </div>
           <aside class='sidebar flow'>
