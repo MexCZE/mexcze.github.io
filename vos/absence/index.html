@@ -23,19 +23,16 @@
         <p class="select-label">Vyber předmět pro výpočet:</p>
         <select id="subject" onchange="updateInfo()">
             <option value="" disabled selected hidden>Vyber předmět</option>
-            <option value="sos">SOS</option>
-            <option value="psh">PSH</option>
             <option value="anj">ANJ</option>
+            <option value="ano">ANO</option>
+            <option value="aso">ASO</option>
+            <option value="cad">CAD</option>
+            <option value="dat">DAT</option>
             <option value="efi">EFI</option>
             <option value="isr">ISR</option>
-            <option value="mae">MAE</option>
-            <option value="mar">MAR</option>
-            <option value="mpd">MPD</option>
-            <option value="pik">PIK</option>
-            <option value="pvo">PVO</option>
-            <option value="sso">SSO</option>
-            <option value="szd">SZD</option>
-            <option value="aso">ASO</option>
+            <option value="kod">KOD</option>
+            <option value="pjr">PJR</option>
+            <option value="spr">SPR</option>
         </select>
         <p>Zadej počet zameškaných hodin:</p>
         <input type="number" pattern="\d*" id="missedHours" placeholder="Počet zameškaných hodin" onkeydown="handleKeyPress(event)">

@@ -1,17 +1,14 @@
 var subjectLimits = {
-    "sos": {limit: 20, totalHours: 32},
-    "psh": {limit: 30, totalHours: 32},
-    "anj": {limit: 20, totalHours: 80},
+    "anj": {limit: 20, totalHours: 48},
+    "ano": {limit: 20, totalHours: 32},
+    "aso": {limit: 20, totalHours: 32},
+    "cad": {limit: 30, totalHours: 32},
+    "dat": {limit: 20, totalHours: 32},
     "efi": {limit: 30, totalHours: 48},
-    "isr": {limit: 25, totalHours: 64},
-    "mae": {limit: 25, totalHours: 32},
-    "mar": {limit: 30, totalHours: 48},
-    "mpd": {limit: 20, totalHours: 32},
-    "pik": {limit: 20, totalHours: 32},
-    "pvo": {limit: 30, totalHours: 32},
-    "sso": {limit: 20, totalHours: 48},
-    "szd": {limit: 20, totalHours: 32},
-    "aso": {limit: 20, totalHours: 32}
+    "isr": {limit: 20, totalHours: 32},
+    "kod": {limit: 30, totalHours: 32},
+    "pjr": {limit: 20, totalHours: 32},
+    "spr": {limit: 15, totalHours: 224}
 };
 
 function updateInfo() {
