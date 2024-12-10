@@ -3,7 +3,7 @@ var subjectLimits = {
     "ano": {limit: 50, totalHours: 32},
     "aso": {limit: 70, totalHours: 32},
     "cad": {limit: 60, totalHours: 32},
-    "dat": {limit: 60, totalHours: 32},
+    "dat": {limit: 60, totalHours: 32}, 
     "efi": {limit: 60, totalHours: 48},
     "isr": {limit: 60, totalHours: 32},
     "kod": {limit: 50, totalHours: 32},
