@@ -1,111 +1,106 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VOŠ</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/vos/icon.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOŠ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/vos/icon.png" type="image/x-icon">
 </head>
+
 <body>
-    <div class="content-grid">
-        <header class="primary-header full-width">
-          <div class="primary-header__layout breakout-right">
-            <nav class="primary-navigation">
-              <ul>
-                <li><a href="#">Discover</a></li>
-                <li><a href="#">Live</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a aria-current="page" href="#">Conferences</a></li>
-              </ul>
-            </nav>
-      
-            <div class="account-links">
-              <a href="#">Log In</a>
-              <a href="#" class="create-account">Get Started</a>
-            </div>
-          </div> 
-        </header>
-        <nav aria-label="Breadcrumb" class="breadcrumbs">
-          <ol>
-            <li><a aria-current="page" href="#">VOŠ</a></li>
-          </ol>
+  <div class="content-grid">
+    <header class="primary-header full-width">
+      <div class="primary-header__layout breakout-right">
+        <nav class="primary-navigation">
+          <ul>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Live</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a aria-current="page" href="#">Conferences</a></li>
+          </ul>
         </nav>
-        <main class="main-with-aside">
-          <div class="flow">
-      
-            <h1>VOŠ</h1>
-            <div class="filter">
-              <h2 class="visually-hidden">Filter by type of conference</h2>
-              <button class='filter-btn active' data-filter="all">All</button>
-              <button class='filter-btn' data-filter="rocnik">Ročníky</button>
-              <button class='filter-btn' data-filter="ucebni-plan">Učební plán</button>
-            </div>
-      
-            <ul class="conference-list">
-              <li class="conference" data-category='rocnik'>
-                <div class="conference-details">
-                  <span class="conference-date">1. září 2023 - 28. června 2024</span>
-                  <span class="conference-category">Ročník</span>
-                </div>
-                <a href="1rocnik.html" class="link">
-                  <h2 class="conference-name">1. ročník</h2>
-                </a>
-              </li>
-      
-              <li class="conference" data-category='rocnik'>
-                <div class="conference-details">
-                  <span class="conference-date">2. září 2024 - 27. června 2025</span>
-                  <span class="conference-category">Ročník</span>
-                </div>
-                <a href="2rocnik.html" class="link">
-                  <h2 class="conference-name">2. ročník</h2>
-                </a>
-              </li>
-      
-              <li class="conference" data-category='rocnik'>
-                <div class="conference-details">
-                  <span class="conference-date">1. září 2025 - 28. června 2026</span>
-                  <span class="conference-category">Ročník</span>
-                </div>
-                  <h2 class="conference-name">3. ročník</h2>
-              </li>
 
-              <li class="conference" data-category='ucebni-plan'>
-                <div class="conference-details">
-                  <span class="conference-category">Učební plán</span>
-                </div>
-                <a href="3rocnik.html" class="link">
-                  <a href="predmet/1rocnik/zo/IF_Ucebni-plan-2022.pdf" class="link" target="_blank">
-                    <h2 class="conference-name">Učební plán 2022</h2>
-                  </a>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <aside class='sidebar flow'>
-            <h3>Nástroje</h3>
-            <div>
-              <h4 class="nastroje-item">
-                <a 
-                  href="/vos/absence/index.html" 
-                  class="link"
-                  target="_blank">Kalkulačka absence</a>
-              </h4>
-              <h4 class="nastroje-item">
-                <a href="https://bakalari.spseplzen.cz/"
-                class="link"
-                target="_blank">Bakaláři</a>
-              </h4>
-              <h4 class="nastroje-item">
-                <a href="https://bakalari.spseplzen.cz/Timetable/Public/Actual/Class/A9"
-                class="link"
-                target="_blank">Rozvrh</a>
-              </h4>
-          </aside>
-        </main>
+        <div class="account-links">
+          <a href="#">Log In</a>
+          <a href="#" class="create-account">Get Started</a>
+        </div>
       </div>
+    </header>
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
+      <ol>
+        <li><a aria-current="page" href="#">VOŠ</a></li>
+      </ol>
+    </nav>
+    <main class="main-with-aside">
+      <div class="flow">
 
-      <script src="script.js"></script>
+        <h1>VOŠ</h1>
+        <div class="filter">
+          <h2 class="visually-hidden">Filter by type of conference</h2>
+          <button class='filter-btn active' data-filter="all">All</button>
+          <button class='filter-btn' data-filter="rocnik">Ročníky</button>
+          <button class='filter-btn' data-filter="ucebni-plan">Učební plán</button>
+        </div>
+
+        <ul class="conference-list">
+          <li class="conference" data-category='rocnik'>
+            <div class="conference-details">
+              <span class="conference-date">1. září 2023 - 28. června 2024</span>
+              <span class="conference-category">Ročník</span>
+            </div>
+            <a href="1rocnik.html" class="link">
+              <h2 class="conference-name">1. ročník</h2>
+            </a>
+          </li>
+
+          <li class="conference" data-category='rocnik'>
+            <div class="conference-details">
+              <span class="conference-date">2. září 2024 - 27. června 2025</span>
+              <span class="conference-category">Ročník</span>
+            </div>
+            <a href="2rocnik.html" class="link">
+              <h2 class="conference-name">2. ročník</h2>
+            </a>
+          </li>
+
+          <li class="conference" data-category='rocnik'>
+            <div class="conference-details">
+              <span class="conference-date">1. září 2025 - 28. června 2026</span>
+              <span class="conference-category">Ročník</span>
+            </div>
+            <h2 class="conference-name">3. ročník</h2>
+          </li>
+
+          <li class="conference" data-category='ucebni-plan'>
+            <div class="conference-details">
+              <span class="conference-category">Učební plán</span>
+            </div>
+            <a href="IF_Ucebni-plan-2022.pdf" class="link" target="_blank">
+              <h2 class="conference-name">Učební plán 2022</h2>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <aside class='sidebar flow'>
+        <h3>Nástroje</h3>
+        <div>
+          <h4 class="nastroje-item">
+            <a href="/vos/absence/index.html" class="link" target="_blank">Kalkulačka absence</a>
+          </h4>
+          <h4 class="nastroje-item">
+            <a href="https://bakalari.spseplzen.cz/" class="link" target="_blank">Bakaláři</a>
+          </h4>
+          <h4 class="nastroje-item">
+            <a href="https://bakalari.spseplzen.cz/Timetable/Public/Actual/Class/A9" class="link"
+              target="_blank">Rozvrh</a>
+          </h4>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
