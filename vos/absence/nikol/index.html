@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Absence Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Školní absence</h1>
+  <table id="subjectsTable">
+    <thead>
+      <tr>
+        <th>Předmět</th>
+        <th>Celkem hodin</th>
+        <th>Limit absence</th>
+        <th>Chybějící hodiny</th>
+        <th>% absence</th>
+        <th>Zbývající hodiny</th>
+        <th>Akce</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    let subjects = [];
+
+    async function loadSubjects() {
+      const res = await fetch("api.php");
+      subjects = await res.json();
+      renderTable();
+    }
+
+    function renderTable() {
+      const tbody = document.querySelector("#subjectsTable tbody");
+      tbody.innerHTML = "";
+
+      subjects.forEach((subj, index) => {
+        const tr = document.createElement("tr");
+
+        const percent = ((subj.missed / subj.totalHours) * 100).toFixed(1);
+        const remaining = subj.maxAbsence - subj.missed;
+
+        tr.innerHTML = `
+          <td>${subj.name}</td>
+          <td>${subj.totalHours}</td>
+          <td>${subj.maxAbsence}</td>
+          <td>${subj.missed}</td>
+          <td style="color:${subj.missed >= subj.maxAbsence ? "red" : subj.missed >= subj.maxAbsence * 0.7 ? "orange" : "black"}">
+            ${percent} %
+          </td>
+          <td>${remaining >= 0 ? remaining : "limit překročen!"}</td>
+          <td>
+            <button onclick="changeAbsence(${index}, -1)">–</button>
+            <button onclick="changeAbsence(${index}, 1)">+</button>
+          </td>
+        `;
+
+        tbody.appendChild(tr);
+      });
+    }
+
+    async function changeAbsence(index, delta) {
+      if (delta === -1 && subjects[index].missed === 0) return;
+      subjects[index].missed += delta;
+      await saveSubjects();
+      renderTable();
+    }
+
+    async function saveSubjects() {
+      await fetch("api.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(subjects)
+      });
+    }
+
+    loadSubjects();
+  </script>
+</body>
+</html>
