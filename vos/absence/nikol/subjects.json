@@ -2,22 +2,19 @@
   {
     "id": "math",
     "name": "Matematika",
-    "totalHours": 120,
-    "maxAbsence": 30,
-    "missed": 0
+    "totalHours": 32,
+    "maxAbsence": 20
   },
   {
     "id": "czech",
     "name": "Český jazyk",
     "totalHours": 100,
-    "maxAbsence": 25,
-    "missed": 0
+    "maxAbsence": 25
   },
   {
     "id": "english",
     "name": "Angličtina",
     "totalHours": 90,
-    "maxAbsence": 20,
-    "missed": 0
+    "maxAbsence": 20
   }
 ]

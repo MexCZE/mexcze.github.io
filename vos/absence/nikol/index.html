@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Absence Tracker</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f9fa; padding: 20px; }
+    h1 { text-align: center; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    th, td { padding: 10px; border: 1px solid #ddd; text-align: center; }
+    button { padding: 5px 10px; margin: 0 2px; cursor: pointer; }
+    .danger { color: red; font-weight: bold; }
+    .warning { color: orange; font-weight: bold; }
+  </style>
 </head>
 <body>
   <h1>Školní absence</h1>
@@ -26,54 +34,60 @@
     let subjects = [];
 
     async function loadSubjects() {
-      const res = await fetch("api.php");
+      const res = await fetch("subjects.json");
       subjects = await res.json();
+
+      // načtení uložených absencí
+      subjects.forEach(s => {
+        const saved = localStorage.getItem("absence_" + s.id);
+        s.missed = saved ? parseInt(saved) : 0;
+      });
+
       renderTable();
     }
 
-    function renderTable() {
-      const tbody = document.querySelector("#subjectsTable tbody");
-      tbody.innerHTML = "";
+function renderTable() {
+  const tbody = document.querySelector("#subjectsTable tbody");
+  tbody.innerHTML = "";
 
-      subjects.forEach((subj, index) => {
-        const tr = document.createElement("tr");
+  subjects.forEach((subj, index) => {
+    const maxMissed = Math.floor(subj.totalHours * (subj.maxAbsence / 100));
+    const percent = ((subj.missed / subj.totalHours) * 100).toFixed(1);
+    const remaining = maxMissed - subj.missed;
 
-        const percent = ((subj.missed / subj.totalHours) * 100).toFixed(1);
-        const remaining = subj.maxAbsence - subj.missed;
+    let percentClass = "";
+    if (subj.missed >= maxMissed) percentClass = "danger";
+    else if (subj.missed >= maxMissed * 0.7) percentClass = "warning";
 
-        tr.innerHTML = `
-          <td>${subj.name}</td>
-          <td>${subj.totalHours}</td>
-          <td>${subj.maxAbsence}</td>
-          <td>${subj.missed}</td>
-          <td style="color:${subj.missed >= subj.maxAbsence ? "red" : subj.missed >= subj.maxAbsence * 0.7 ? "orange" : "black"}">
-            ${percent} %
-          </td>
-          <td>${remaining >= 0 ? remaining : "limit překročen!"}</td>
-          <td>
-            <button onclick="changeAbsence(${index}, -1)">–</button>
-            <button onclick="changeAbsence(${index}, 1)">+</button>
-          </td>
-        `;
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${subj.name}</td>
+      <td>${subj.totalHours}</td>
+      <td>${subj.maxAbsence} %</td>
+      <td>${subj.missed}</td>
+      <td class="${percentClass}">${percent} %</td>
+      <td>${remaining >= 0 ? remaining : "limit překročen!"}</td>
+      <td>
+        <button onclick="changeAbsence(${index}, -1)">–</button>
+        <button onclick="changeAbsence(${index}, 1)">+</button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
 
-        tbody.appendChild(tr);
-      });
-    }
+function changeAbsence(index, delta) {
+  const subj = subjects[index];
+  const maxMissed = Math.floor(subj.totalHours * (subj.maxAbsence / 100));
 
-    async function changeAbsence(index, delta) {
-      if (delta === -1 && subjects[index].missed === 0) return;
-      subjects[index].missed += delta;
-      await saveSubjects();
-      renderTable();
-    }
+  subj.missed += delta;
+  if (subj.missed < 0) subj.missed = 0;
+  if (subj.missed > maxMissed) subj.missed = maxMissed;
 
-    async function saveSubjects() {
-      await fetch("api.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(subjects)
-      });
-    }
+  localStorage.setItem("absence_" + subj.id, subj.missed);
+  renderTable();
+}
+
 
     loadSubjects();
   </script>
