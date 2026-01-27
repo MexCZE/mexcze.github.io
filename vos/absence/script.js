@@ -1,10 +1,10 @@
 var subjectLimits = {
-    "anj": {limit: 20, totalHours: 48},
-    "ano": {limit: 20, totalHours: 32},
-    "aso": {limit: 20, totalHours: 32},
+    "anj": {limit: 20, totalHours: 42},
+    "ano": {limit: 20, totalHours: 28},
+    "aso": {limit: 20, totalHours: 28},
     "isr": {limit: 30, totalHours: 64},
-    "pjr": {limit: 30, totalHours: 32},
-    "spr": {limit: 15, totalHours: 336}
+    "pjr": {limit: 30, totalHours: 28},
+    "spr": {limit: 15, totalHours: 294}
 };
 
 function updateInfo() {
